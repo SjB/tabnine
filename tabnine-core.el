@@ -801,8 +801,7 @@ To work around posn problems with after-string property.")
 
 (defvar tabnine-completion-map
   (let ((keymap (make-sparse-keymap)))
-    (define-key keymap (kbd "TAB") #'tabnine-accept-completion)
-    (define-key keymap (kbd "<tab>") #'tabnine-accept-completion)
+    (define-key keymap [C-tab] #'tabnine-accept-completion)
     (define-key keymap (kbd "C-g")  #'tabnine-clear-overlay)
     (define-key keymap (kbd "M-f")  #'tabnine-accept-completion-by-word)
     (define-key keymap (kbd "M-<return>")  #'tabnine-accept-completion-by-line)
